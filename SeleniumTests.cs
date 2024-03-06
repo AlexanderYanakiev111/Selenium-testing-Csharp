@@ -10,17 +10,15 @@ public class SeleniumTests
     [Category("Selenium")]
     public void goToUrlTest_01()
     {
-
         IWebDriver driver = new ChromeDriver();
+        
         driver.Navigate().GoToUrl("https://ecommerce-playground.lambdatest.io/index.php?route=common/home"); 
 
-        driver.Quit(); 
-             
+        driver.Quit();              
     }
 
     public void logInTest_02()
-    {
-          
+    {    
         IWebDriver driver = new ChromeDriver();
           
         IWebElement myAccountDropdownList = driver.FindElement(By.XPath("//span[text()[normalize-space()='My account']]"));
@@ -34,14 +32,12 @@ public class SeleniumTests
        
         IWebElement loginButton = driver.FindElement(By.XPath("//input[@class='btn btn-primary']"));
         loginButton.Click();
-
         driver.Quit();
 
     }
 
     public void addToCartTest_03()
     {
-
         IWebDriver driver = new ChromeDriver();
         
         IWebElement product = driver.FindElement(By.XPath("//a[@id='mz-product-listing-image-37213259-0-2']/div[1]/div[1]/img[1]"));
@@ -51,12 +47,10 @@ public class SeleniumTests
         addToCartButton.Click(); 
 
         driver.Quit();
-
     }
 
     public void ElementIsVisibleInCart_04()
     {
-
         IWebDriver driver = new ChromeDriver();
 
         IWebElement cartLink = driver.FindElement(By.XPath("//div[@class='cart-icon']//div)[2])"));
@@ -79,7 +73,6 @@ public class SeleniumTests
 
     public void checkoutInformationTest_05()
     {
-
         IWebDriver driver = new ChromeDriver();
       
         IWebElement firstNameField = driver.FindElement(By.Id("input-payment-firstname"));
@@ -130,12 +123,10 @@ public class SeleniumTests
         confirmOrderButton.Click();
 
         driver.Quit();
-
     }
 
     public void LogoutTest_06()
-    {
-
+    {   
         IWebDriver driver = new ChromeDriver();
         
         IWebElement myAccountDropdownList = driver.FindElement(By.XPath("//span[text()[normalize-space()='My account']]"));
@@ -143,7 +134,7 @@ public class SeleniumTests
 
         logOutButton.SelectByText("//span[text()[normalize-space()='Logout']]");
         
-        driver.Quit();
+        driver.Quit();       
     }
 
 
